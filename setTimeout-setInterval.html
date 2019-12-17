@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="counter">0</p>
+    <button onclick="clearInterval(mycounter);">Stop Counting</button>
+    <button onclick="clearTimeout(delayedMessage);">Stop greeting Message</button>
+    <script>
+        let x=0;
+        let counter=document.getElementById("counter");
+        var mycounter=setInterval(function(){
+            x++;
+            counter.textContent=x;
+        }, 1000);
+        
+        let delayedMessage = setTimeout(function(){
+            alert("Hello! welcome to JS");
+        }, 3000);
+    </script>
+</body>
+</html>
